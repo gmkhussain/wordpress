@@ -20,6 +20,16 @@ Additional file list:
 Working...
 ```
 
+
+##Posts_per_page with no limit
+```html
+$args = array(
+'post_type'      => 'post',
+'posts_per_page' => -1
+);
+```
+
+
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>
