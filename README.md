@@ -22,6 +22,17 @@ Working...
 
 
 
+##ContactForm7 HTML with Bootstrap classes
+```html
+<div class="form-group col-sm-4 pad-l0">[text* first-name class:form-control placeholder "Name" ]</div>
+<div class="form-group col-sm-4 pad-r0">[email* your-email class:form-control placeholder "Email"]</div>
+<div class="form-group col-sm-12 pad0">[textarea your-message class:form-control ]</div>
+<div class="form-group col-sm-12 pad0">[submit class:form-control "send"]</div>
+```
+
+
+
+
 ##Remove the width and height attributes from WP image *Past in 'functions.php'
 ```html
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
@@ -32,17 +43,6 @@ function remove_width_attribute( $html ) {
     return $html;
 }
 ```
-
-
-
-##ContactForm7 HTML with Bootstrap classes
-```html
-<div class="form-group col-sm-4 pad-l0">[text* first-name class:form-control placeholder "Name" ]</div>
-<div class="form-group col-sm-4 pad-r0">[email* your-email class:form-control placeholder "Email"]</div>
-<div class="form-group col-sm-12 pad0">[textarea your-message class:form-control ]</div>
-<div class="form-group col-sm-12 pad0">[submit class:form-control "send"]</div>
-```
-
 
 
 ##Posts_per_page with no limit
