@@ -266,4 +266,4 @@ register_sidebar( array(
 'before_title' => '',
 'after_title' => '',
 ) );
-*/
+*/include("metabox_fields.php");?>
