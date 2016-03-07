@@ -54,6 +54,14 @@ $args = array(
 ```
 
 
+##Contact form 7 Redirecting to Another URL After submissions
+contact form 7 > 'Additional Settings'
+just add this code.
+```html
+on_sent_ok: "location = 'http://mydomain.com/thank-you/';"
+```
+
+
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>
