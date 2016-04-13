@@ -59,3 +59,10 @@ $args = array(
 <br/>
 [<img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" width="auto" height="32" /> Coded by @GMKHussain](http://twitter.com/gmkhussain)
 <hr/>
+
+##Contact form 7 Redirecting to Another URL After submissions
+contact form 7 > 'Additional Settings'
+just add this code.
+```html
+on_sent_ok: "location = 'http://mydomain.com/thank-you/';"
+```

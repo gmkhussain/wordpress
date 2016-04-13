@@ -30,6 +30,7 @@
  *
  * @since Twenty Fifteen 1.0
  */
+
 if ( ! isset( $content_width ) ) {
 	$content_width = 660;
 }
