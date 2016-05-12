@@ -1,28 +1,13 @@
 <?php 
-
-function hussain_theme_styles() {
-	//Header File
-    wp_enqueue_style( 'a22', get_stylesheet_directory_uri() . '/style.css' );
-	wp_enqueue_style( 'bootstrapmin', get_stylesheet_directory_uri() . '/css/bootstrap.min.css');
-	wp_enqueue_style( 'animate', get_stylesheet_directory_uri() . '/css/animate.css' );
-	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/css/font-awesome.css' );
-	wp_enqueue_style( 'slidenav', get_stylesheet_directory_uri() . '/css/slidenav.css' );
-
-	
-	//Footer Files	wp_enqueue_script( 'boostrapjs', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'animateme', get_stylesheet_directory_uri() . '/js/kscript.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'viewportchecker', get_stylesheet_directory_uri() . '/js/viewportchecker.js', array(), '1.0.0', true );
-}
-
-add_action( 'wp_enqueue_scripts', 'hussain_theme_styles' );
+function hussain_theme_styles() {	//Header File    wp_enqueue_style( 'a22', get_stylesheet_directory_uri() . '/style.css' );	wp_enqueue_style( 'bootstrapmin', get_stylesheet_directory_uri() . '/css/bootstrap.min.css');	wp_enqueue_style( 'animate', get_stylesheet_directory_uri() . '/css/animate.css' );	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/css/font-awesome.css' );	wp_enqueue_style( 'slidenav', get_stylesheet_directory_uri() . '/css/slidenav.css' );	
+	//Footer Files	wp_enqueue_script( 'boostrapjs', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array(), '1.0.0', true );	wp_enqueue_script( 'animateme', get_stylesheet_directory_uri() . '/js/kscript.js', array(), '1.0.0', true );	wp_enqueue_script( 'viewportchecker', get_stylesheet_directory_uri() . '/js/viewportchecker.js', array(), '1.0.0', true );}add_action( 'wp_enqueue_scripts', 'hussain_theme_styles' );
 
 
 
 
 
 
-/******slider in dashboard***********/
-function my_custom_sliders_posttype(){
+/******slider in dashboard***********/function my_custom_sliders_posttype(){
    $args = array(
    'labels'=> array( 'name'=>'sliders',
        'singular_name'=> 'slider',
@@ -87,7 +72,7 @@ function args_products_posttype(){
 
 
 
-
+/****ourwork_args category in posttype***/$ourwork_args = array(    'labels' => array(    'name' => 'ourwork Items',    'singular_name' => 'ourwork Item'),    'description' => 'Allows you to build custom ourwork items and link them to categories',    'public' => true,    'show_ui' => true,    'menu_position' => 20,    'supports' => array('title', 'editor', 'thumbnail'),    'has_archive' => true,    'rewrite' => array('slug' => 'ourwork-item'),    'can_export' => true);// http://codex.wordpress.org/Function_Reference/register_post_typeregister_post_type('ourwork', $ourwork_args);$categories_labels = array(    'label' => 'Categories',    'hierarchical' => true,    'query_var' => true);// Register taxonomies for extra post type capabilitiesregister_taxonomy('ourwork_categories', 'ourwork', $categories_labels);/****./ourwork_args category in posttype***//*****portfolio_args category in posttype***/$portfolio_args = array(    'labels' => array(    'name' => 'Portfolio Items',    'singular_name' => 'Portfolio Item'),    'description' => 'Allows you to build custom portfolio items and link them to categories',    'public' => true,    'show_ui' => true,    'menu_position' => 20,    'supports' => array('title', 'editor', 'thumbnail'),    'has_archive' => true,    'rewrite' => array('slug' => 'portfolio-item'),    'can_export' => true);// http://codex.wordpress.org/Function_Reference/register_post_typeregister_post_type('portfolio', $portfolio_args);$categories_labels = array(    'label' => 'Categories',    'hierarchical' => true,    'query_var' => true);// Register taxonomies for extra post type capabilitiesregister_taxonomy('portfolio_categories', 'portfolio', $categories_labels);/****./portfolio_args category in posttype ***/
 
 
 
