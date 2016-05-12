@@ -20,6 +20,9 @@ Additional file list:
 Working...
 ```
 
+##Admin info
+User: admin
+Password: admin123
 
 
 ##ContactForm7 HTML with Bootstrap classes

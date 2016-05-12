@@ -1,23 +1,7 @@
 <?php
-/**
- * The template for displaying the header
- *
- * Displays all of the head element and everything up until the "site-content" div.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
+/** * The template for displaying the header * * Displays all of the head element and everything up until the "site-content" div. * * @package WordPress * @subpackage Twenty_Fifteen * @since Twenty Fifteen 1.0 */
 ?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
-  <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="" />	
+<!DOCTYPE html><html <?php language_attributes(); ?> class="no-js">  <head>	<meta charset="<?php bloginfo( 'charset' ); ?>">	<link rel="profile" href="http://gmpg.org/xfn/11">	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1">		<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri();?>/images/favicon.png">	
 <?php  wp_head(); ?>
 
     <!-- Bootstrap 
@@ -37,8 +21,7 @@
     <![endif]-->
   </head>
   <body <?php body_class( $class ); ?>>
-
-  
+		<?phpglobal $post;$slug = get_post( $post )->post_name;echo $slug;?>				
 <?php        
 								$post2 = get_post(74);
 							setup_postdata($post2);
