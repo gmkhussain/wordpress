@@ -1,8 +1,5 @@
 <?php /* Template Name: My Basic Page */ ?>
-
-<?php get_header(); ?>
-
-
+<?php get_header(); ?>
 <section class="inner-page">
 	<?php
 		// Start the loop.
@@ -24,5 +21,4 @@
 		
 
 </section>
-
-<?php get_footer(); ?>
+<?php get_footer(); ?>
