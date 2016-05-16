@@ -4,9 +4,7 @@ function hussain_theme_styles() {	//Header File    wp_enqueue_style( 'a22', ge
 
 
 
-
-
-
+
 /******slider in dashboard***********/function my_custom_sliders_posttype(){
    $args = array(
    'labels'=> array( 'name'=>'sliders',
@@ -21,7 +19,7 @@ function hussain_theme_styles() {	//Header File    wp_enqueue_style( 'a22', ge
    'publicly_queryable'=> true,
    'show_ui' => true,
    'show_in_menu'=> true,
-   'show_in_admin_bar'=> true,
+   'show_in_admin_bar'=> true,		'menu_icon' => 'dashicons-images-alt2',	
    'menu_position'=>6,
    'capability_type'=> 'page',
    'supports'=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt',
