@@ -3,26 +3,41 @@
 			<div class="container">
 				<div class="ftr-box col-sm-3 ftr-logo">
 					<h4>Footer Logo</h4>
-					<div class="ftr__logo"><img src="images/favicon.png" atl="" /></div>
+					
+					<?php $post = get_post(31); setup_postdata($post); ?>
+					
+					<div class="ftr__logo"><?php the_post_thumbnail(); ?></div>
+					
 				</div>
 				<div class="ftr-box col-sm-6 ftr-links list-col-2 clrlist listview">
 					<h4>Useful links</h4>
-					<ul>
-						<li><a href="#">Ink®</a></li>
-						<li><a href="#">Training</a></li>
-						<li><a href="#">Design Resources</a></li>
-						<li><a href="#">Notable</a></li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">Blog</a></li>
-					</ul>
+					
+					<?php
+						$defaults = array(
+							'theme_location'  => '',
+							'menu'            => 'main_menu',
+							'container'       => '',
+							'container_class' => '',
+							'container_id'    => 'bs-navbar-ftr',
+							'menu_class'      => 'navbar-ftr',
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'items_wrap'      => '<ul id="%1$s" class="navbar-ftr">%3$s</ul>',
+							'depth'           => 0,
+							'walker'          => ''
+						);
+						wp_nav_menu( $defaults );
+						?>
+						
 				</div>
 				<div class="ftr-box col-sm-3 social-area clrlist">
 					<h4>Connect with Us</h4>
-					<ul>
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-google"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					</ul>					
+					<?php dynamic_sidebar( 'social_icons' ); ?>				
 				</div>				
 			</div>
 		</section>
