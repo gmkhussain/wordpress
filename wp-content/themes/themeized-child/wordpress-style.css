@@ -1,0 +1,21 @@
+
+/*admin*/
+.dashicons-heart:before {
+    color: hotpink !important;
+}
+
+.dashicons-products:before {
+    color: #3aa !important;
+}
+
+.dashicons-schedule:before {
+    color: #c73 !important;
+}
+
+.dashicons-images-alt2:before {
+    color: #7ad !important;
+}
+li#menu-posts-wysiwyg-widget .dashicons-admin-post:before {
+    color: #6d4;
+}
+/*./admin*/

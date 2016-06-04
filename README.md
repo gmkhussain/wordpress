@@ -64,6 +64,12 @@ just add this code.
 on_sent_ok: "location = 'http://mydomain.com/thank-you/';"
 ```
 
+##Admin Styling
+```html
+//add this code in wp-admin/admin-header.php
+<?php wp_enqueue_style( 'wordpress-style', get_stylesheet_directory_uri() . '/wordpress-style.css' ); ?>
+```
+
 
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
