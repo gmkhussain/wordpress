@@ -70,7 +70,14 @@ on_sent_ok: "location = 'http://mydomain.com/thank-you/';"
 <?php wp_enqueue_style( 'wordpress-style', get_stylesheet_directory_uri() . '/wordpress-style.css' ); ?>
 ```
 
-
+##WooCommerce thumbnails images display in main image on mouse click
+```html
+	jQuery( ".thumbnails a" ).click(function() {
+		imgUrl = jQuery(this).attr('data-href');
+		imgBig = jQuery(".woocommerce-main-image img").attr('src', imgUrl);
+	});
+```
+		
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>

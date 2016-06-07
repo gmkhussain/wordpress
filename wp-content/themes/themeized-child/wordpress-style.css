@@ -1,4 +1,3 @@
-
 /*admin*/
 .dashicons-heart:before {
     color: hotpink !important;
@@ -9,13 +8,22 @@
 }
 
 .dashicons-schedule:before {
+    color: #964068 !important;
+}
+
+.dashicons-admin-comments:before {
     color: #c73 !important;
 }
 
 .dashicons-images-alt2:before {
     color: #7ad !important;
 }
+
 li#menu-posts-wysiwyg-widget .dashicons-admin-post:before {
     color: #6d4;
 }
+.dashicons-format-gallery:before {
+    color: #ACB33C !important;
+}
+
 /*./admin*/
