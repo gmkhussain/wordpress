@@ -97,6 +97,12 @@ on_sent_ok: "location = 'http://mydomain.com/thank-you/';"
 		imgBig = jQuery(".woocommerce-main-image img").attr('src', imgUrl);
 	});
 ```
+
+
+##Fixing Images and Broken Links by updating Paths in WordPress by SQL query
+```html
+UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/projects/wordpress/myproject_wp/', 'http://mydomain.com/projects/myproject_wp/');
+```
 		
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
