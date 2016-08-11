@@ -84,6 +84,24 @@ just add this code.
 on_sent_ok: "location = 'http://mydomain.com/thank-you/';"
 ```
 
+<p id="pwd4cf7"></p>
+###Password Fields for ContactForm7
+```html
+//HTML code
+<input type="text" name="your-password" class="password"  value="daddd">
+
+//ContactForm7 Shortcode
+[text password]
+ or 
+[text your-password]
+ or 
+[text my-password]
+
+
+//Add this jQuery code in footer file. * Tested is working.
+jQuery("[name*='password']").attr("type", "password");
+```
+
 ##Admin Styling
 ```html
 //add this code in wp-admin/admin-header.php
