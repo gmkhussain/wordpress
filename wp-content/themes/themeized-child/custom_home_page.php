@@ -62,5 +62,54 @@
 </section>
 	
 	
+	<section class="tabs-area tab-animate">
+	
+		<div class="bg-red">
+			<div class="container">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs nav-cntr">
+				  
+				  <?php 
+					$tab_number = 1; 
+					$args = array('post_type' => 'mytabs', 'order' => 'ASC');
+					 
+					$loop = new WP_Query( $args );
 
+					while ( $loop->have_posts() ) : $loop->the_post();
+					?>
+					
+					<li><a href="#tab<?php echo $tab_number++ ?>" data-toggle="tab"><?php the_title(); ?></a></li>
+	  
+				  <?php endwhile;?>
+				  
+				</ul>
+			</div>
+		</div>
+	
+	
+		<div class="bg-white">
+		<div class="container">
+			<div class="tab-content overload">
+			  
+			<?php 
+				$tab_number = 1; 
+				$args = array('post_type' => 'mytabs', 'order' => 'ASC');
+				 
+				$loop = new WP_Query( $args );
+
+				while ( $loop->have_posts() ) : $loop->the_post();
+			?>
+				
+					<div class="tab-pane active" id="tab<?php echo $tab_number++ ?>">
+						<?php the_content(); ?>
+					</div>
+			<?php endwhile;?>
+			  
+			</div>	
+		</div>	
+	</div>	
+	
+		</div>
+	</section>
+	
 <?php get_footer(); ?>
