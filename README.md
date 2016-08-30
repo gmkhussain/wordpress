@@ -36,6 +36,12 @@ SET post_content = REPLACE(post_content,'http://old-domain-name.com','http://new
 
 UPDATE wp_posts
 SET guid = REPLACE(guid,'http://old-domain-name.com','http://new-domain-name.com');
+
+
+//Change WP Options URLs
+UPDATE wp_options
+SET option_value = REPLACE(option_value,'http://localhost/projects/_wpbasic','http://localhost/projects/wordpress/NEW_Project_Name/');
+
 ```
 
 
