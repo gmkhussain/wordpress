@@ -27,3 +27,21 @@ li#menu-posts-wysiwyg-widget .dashicons-admin-post:before {
 }
 
 /*./admin*/
+
+
+
+
+section.inr-bnr { height: 320px; overflow: hidden; background-color: #ccc; position: relative; }
+
+section.inr-bnr .container { position: relative; z-index: 1; color: #fff; text-shadow: 0 0 10px #000; font-size: 4em; margin-top: 2em; }
+
+.menu-item-has-children > ul {
+    display: none;
+}
+
+
+body div.wpcf7-response-output {
+    float: left;
+    padding: 15px;
+    font-size: 1.2em;
+}
