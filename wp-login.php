@@ -68,6 +68,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	<title><?php bloginfo('name'); ?> &rsaquo; <?php echo $title; ?></title>
 	
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/style.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/bootstrap.min.css">
 				
 	<?php
 
@@ -202,7 +203,6 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 		</style>
 		<h1>
 			<img src="<?php echo get_stylesheet_directory_uri();?>/images/logo.png" alt="" class=" mt20 mb20" />
-				
 			<!--small><?php bloginfo( 'name' ); ?></small-->
 		</h1>
 	<?php
@@ -274,7 +274,15 @@ function login_footer($input_id = '') {
 	<p id="backtoblog"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Are you lost?' ); ?>"><?php printf( __( '&larr; Back to %s' ), get_bloginfo( 'title', 'display' ) ); ?></a></p>
 	<?php endif; ?>
 
+
 	</div>
+
+
+
+<div class="wpadmin_bot col-sm-12">
+
+</div>
+
 
 	<?php if ( !empty($input_id) ) : ?>
 	<script type="text/javascript">
