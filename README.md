@@ -10,11 +10,19 @@ Additional file list:
 
 
 ## Installing
-### 1. Create Database
-### 2. Active child-theme
-### 3. Create Menu 'main_menu'
-### 4. Make defult HOME page
-### 5. wp-admin/options-reading.php > "Front page displays" > A static page (select below) > [Save changes]
+### 1. Download WordPress from wordpress.org
+### 2. Create <Project Folder> into htdocs on your XAMPP / Locahost
+### 3. Exract WordPress.zip file
+### 4. Create Database
+### 5. Run SQL code / import SQL file in PHPMyAdmin
+### 6. Change URLs in wp_options
+#### a) site url
+#### b) home
+### 7. Rename wp_content with "wp_content_old"
+### 8. Paste WP Package / Get Git Clone * Replace existing files.
+### 9. Config Database in wp_config.php
+### 10. Login into wp-admin with U: admin , P: admin123
+
 
 ```html
 Working...
