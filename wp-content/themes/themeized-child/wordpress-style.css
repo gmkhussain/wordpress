@@ -18,6 +18,14 @@
 .dashicons-images-alt2:before {
     color: #7ad !important;
 }
+.dashicons-megaphone:before {
+    color: #6d6 !important;
+}
+
+.dashicons-format-status:before {
+    color: #dd5 !important;
+}
+
 
 li#menu-posts-wysiwyg-widget .dashicons-admin-post:before {
     color: #6d4;

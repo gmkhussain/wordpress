@@ -46,6 +46,7 @@ SET option_value = REPLACE(option_value,'http://localhost/projects/_wpbasic','ht
 
 
 
+
 ##Admin info
 User: admin
 Password: admin123
@@ -127,6 +128,15 @@ jQuery("[name*='password']").attr("type", "password");
 ```html
 UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/projects/wordpress/myproject_wp/', 'http://mydomain.com/projects/myproject_wp/');
 ```
+
+##Pagination for Custom Post Type
+```html
+			the_posts_pagination( array(
+				'mid_size'  => 2,
+				'prev_text' => __( '< Prev', 'textdomain' ),
+				'next_text' => __( 'Next >', 'textdomain' ),
+			));
+```			
 		
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
