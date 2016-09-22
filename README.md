@@ -146,6 +146,27 @@ UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/proje
 			));
 ```			
 		
+		
+##Custom Post Type Category Link
+```html
+<?php
+	query_posts( array( 'post_type' => 'myblogs', 'order' => 'ASC', 'myblogs_categories' => 'articles' ) );
+	 /*the loop start here*/
+	  if ( have_posts() ) : while ( have_posts() ) : the_post();
+?>
+			
+	<?php 
+		$terms = get_the_terms( $post->ID, 'myblogs_categories' ); 
+		foreach($terms as $term) {
+	?>
+						
+	  <a href="<?php echo get_term_link($term->slug, 'myblogs_categories') ?>">Show me more <?php echo $term->name; ?></a>
+				  
+	<?php } ?>
+
+<?php endwhile; endif; wp_reset_query(); ?>
+```
+
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>
