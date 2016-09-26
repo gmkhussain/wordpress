@@ -26,6 +26,41 @@
     color: #dd5 !important;
 }
 
+.dashicons-admin-post:before {
+    color: #83ae32 !important;
+}
+
+.dashicons-admin-media:before {
+    color: #b35bff !important;
+}
+
+.dashicons-admin-page:before {
+    color: #5bb4ea !important;
+}
+
+.dashicons-awards:before {
+    color: #bbaf0d !IMPORTANT;
+}
+
+.dashicons-admin-appearance:before {
+    color: #e4e02e !important;
+}
+
+.dashicons-admin-plugins:before {
+    color: #6d6 !important;
+}
+
+.dashicons-admin-users:before {
+    color: #5b8eee !important;
+}
+
+.dashicons-admin-tools:before {
+    color: #d3a22f !important;
+}
+
+.dashicons-admin-settings:before {
+    color: #219191 !important;
+}
 
 li#menu-posts-wysiwyg-widget .dashicons-admin-post:before {
     color: #6d4;
@@ -33,6 +68,27 @@ li#menu-posts-wysiwyg-widget .dashicons-admin-post:before {
 .dashicons-format-gallery:before {
     color: #ACB33C !important;
 }
+
+#wpadminbar #wp-admin-bar-wp-logo>.ab-item .ab-icon:before {
+    color: #5b9dd9;
+}
+
+
+
+#adminmenu li:not(.wp-has-current-submenu) a:after {content: "";height: 100%;background-color: #000;width: 0px;display: block;transition: all 500ms;
+bottom: 0;position: absolute; left:0;top:auto;     z-index:-1;}
+
+#adminmenu li a:hover:after {
+    width: 100%;
+}
+
+#adminmenu li a{
+    position: relative;
+    z-index:0;
+}
+
+
+
 
 /*./admin*/
 
@@ -172,3 +228,6 @@ nav.navigation.post-navigation.-nav {
 
 
 /**./Blog Page***/
+
+
+
