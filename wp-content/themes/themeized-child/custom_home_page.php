@@ -69,18 +69,24 @@
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs nav-cntr">
 				  
-				  <?php 
-					$tab_number = 1; 
-					$args = array('post_type' => 'mytabs', 'order' => 'ASC');
-					 
-					$loop = new WP_Query( $args );
+				<?php
+				$tab_nav_number=0;
+					/*display categories*/
+					$terms = get_terms('mytabs_categories');
 
-					while ( $loop->have_posts() ) : $loop->the_post();
-					?>
-					
-					<li><a href="#tab<?php echo $tab_number++ ?>" data-toggle="tab"><?php the_title(); ?></a></li>
-	  
-				  <?php endwhile;?>
+                    foreach ( $terms as $term ) {
+						
+						/*hidden if slug = slider and = featured */
+                        if($term->slug!='slider' && $term->slug!='featured')
+                        {
+                ?>
+				
+                        <li><a href="#tab<?php echo $tab_nav_number++ ?>" data-toggle="tab" data-link="<?php echo get_term_link($term->slug, 'mytabs_categories') ?>"><?php echo $term->name; ?></a></li>
+						
+                <?php 
+                        }
+                 }
+				?>
 				  
 				</ul>
 			</div>
@@ -91,19 +97,24 @@
 		<div class="container">
 			<div class="tab-content overload">
 			  
-			<?php 
-				$tab_number = 1; 
-				$args = array('post_type' => 'mytabs', 'order' => 'ASC');
-				 
-				$loop = new WP_Query( $args );
+			  <?php
+			  $tab_number=0;
+					/*display categories*/
+					$terms = get_terms('mytabs_categories');
 
-				while ( $loop->have_posts() ) : $loop->the_post();
+                    foreach ( $terms as $term ) {
+
+                ?>
+				<div class="tab-pane active" id="tab<?php echo $tab_number++ ?>">
+					<?php echo $term->name; 
+					echo "dsad"; ?>
+				</div>
+                    
+						
+            <?php
+				}
 			?>
-				
-					<div class="tab-pane active" id="tab<?php echo $tab_number++ ?>">
-						<?php the_content(); ?>
-					</div>
-			<?php endwhile;?>
+			
 			  
 			</div>	
 		</div>	

@@ -47,11 +47,6 @@
 
 </section>
 
-    <script src="<?php echo get_stylesheet_directory_uri();?>/js/bootstrap.min.js"></script>
-	
-	<script src="<?php echo get_stylesheet_directory_uri();?>/js/viewportchecker.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri();?>/js/-kscript.js"></script>
-
 	
 	<?php wp_footer(); ?>
 			
