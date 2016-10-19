@@ -30,6 +30,15 @@ Working...
 
 
 ##Change site URL and WordPress URL in Localhost/Live Site
+###NOTE: 
+Steps  | Actions
+------------- | -------------
+1. | Goto phpMyAdmin
+2. | Click on your Database
+3. | Click on SQL
+4. | Run SQL query as per your needs
+
+
 ```html
 UPDATE wp_options
 SET option_value = 'http://new-domain-name.com'
