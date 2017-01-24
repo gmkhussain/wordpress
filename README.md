@@ -100,6 +100,10 @@ $args = array(
 );
 ```
 
+##Remove All shortcode tags from content.
+```html
+<?php strip_shortcodes( get_the_content() ); ?>
+```
 
 ##Contact form 7 Redirecting to Another URL After submissions
 contact form 7 > 'Additional Settings'
