@@ -105,6 +105,13 @@ $args = array(
 <?php strip_shortcodes( get_the_content() ); ?>
 ```
 
+
+##Truncated string with specified charters
+```html
+<?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?>
+```
+
+
 ##Contact form 7 Redirecting to Another URL After submissions
 contact form 7 > 'Additional Settings'
 just add this code.
