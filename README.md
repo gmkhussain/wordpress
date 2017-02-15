@@ -187,6 +187,25 @@ UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/proje
 <?php endwhile; endif; wp_reset_query(); ?>
 ```
 
+
+
+##PHP Session for counting visits
+```html
+<?php
+session_start();
+
+if (!isset($_SESSION['views'])) { 
+    $_SESSION['views'] = 0;
+}
+
+$_SESSION['views'] = $_SESSION['views']+1;
+
+if ($_SESSION['views'] == 1) {
+    /***DO SOMETHING***/
+}
+?>
+```
+
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>
