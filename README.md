@@ -206,6 +206,19 @@ if ($_SESSION['views'] == 1) {
 ?>
 ```
 
+
+##Checking User login status
+```html
+<?php
+$current_user = wp_get_current_user();
+if ( 0 == $current_user->ID ) {
+    // Not logged in.
+} else {
+    // Logged in.
+}
+?>
+```
+
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>
