@@ -221,7 +221,7 @@ if ( 0 == $current_user->ID ) {
 
 
 
-
+##Woocommerce shortcode for recent products [recent_products per_page="12" columns="5"]
 
 ##How to get Categories from Woocommerce
 ```html
