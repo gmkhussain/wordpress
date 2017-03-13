@@ -219,9 +219,20 @@ if ( 0 == $current_user->ID ) {
 ?>
 ```
 
+##Post thumbnail url
+```html
+<?php echo the_post_thumbnail_url(full);?>
+
+Example: <section class="page-bnr-area bg-cvr" style="background-image:url(<?php echo the_post_thumbnail_url(full);?>)";>
+```
 
 
-##Woocommerce shortcode for recent products [recent_products per_page="12" columns="5"]
+##Woocommerce shortcode for recent products 
+
+```html
+[recent_products per_page="12" columns="5"]
+```
+
 
 ##How to get Categories from Woocommerce
 ```html
