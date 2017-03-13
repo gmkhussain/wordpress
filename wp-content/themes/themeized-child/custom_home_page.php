@@ -8,7 +8,7 @@
  <section class="slider fadeft">
 
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-			  <?php 
+			<?php 
 			 $slide_number = 0; 
 			 $args_number=array(
 				  'post_type'=> 'sliders',
