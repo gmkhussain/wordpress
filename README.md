@@ -234,6 +234,64 @@ Example: <section class="page-bnr-area bg-cvr" style="background-image:url(<?php
 ```
 
 
+
+
+##Woocommerce Cart Item dropdown
+			```html		 
+					<li class="dropdown cart-menu"><a href="<?php echo wc_get_cart_url(); ?>"><i class="icon topicon2"><img src="<?php echo get_stylesheet_directory_uri();?>/images/cart-icon.png"></i></a> 
+					
+										
+						<?php global $woocommerce; ?>
+						
+						<a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">Cart Items <span class="total">(<?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>)</span></a>
+
+					  
+					  <?php if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) : ?>
+					  <ul class="dropdown-menu">
+					  
+										<?php $woocommerce->cart->cart_contents = array_reverse($woocommerce->cart->cart_contents); ?>
+										<?php foreach ( $woocommerce->cart->get_cart() as $cart_item_key => $values ) :
+											$_product = $values['data'];
+											if ( $_product->exists() && $values['quantity'] > 0 ) :
+												$product_quantity = esc_attr( $values['quantity'] );
+												$product_price = (( get_option('woocommerce_display_cart_prices_excluding_tax') == 'yes' ) ? $_product->get_price_excluding_tax() : $_product->get_price()) * $product_quantity;
+											?>
+											<li>
+												<span class="shop-bag-thumb">
+													<a href="<?php echo esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $values['product_id'] ) ) ); ?>" class="clearfix">
+														<?php echo $_product->get_image('zoom-thumb'); ?>
+													</a>
+												</span>
+
+												<span class="details">
+													<span class="title"><?php echo $_product->get_title(); ?></span>
+													
+													<span class="qty">Qty: <?php echo $product_quantity; ?></span>
+													
+													<?php echo apply_filters('woocommerce_cart_item_price_html', woocommerce_price( $product_price ), $values, $cart_item_key ); ?>
+
+												<?php echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" title="%s">&times;</a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __('Remove from cart', 'woocommerce') ), $cart_item_key ); 
+													?>
+												</span>
+												
+											</li>
+										<?php endif; endforeach; ?>
+									
+									<div class="subtotal">
+										<span class="text">Subtotal</span><span class="total"><?php echo $woocommerce->cart->get_cart_total(); ?></span>
+									</div>
+									
+									<a href="<?php echo home_url( '/' ); ?>shopping-bag/" class="go-to-checkout">Checkout</a>
+								
+								<?php endif; ?>			
+	
+					  </ul>
+			
+					</li>
+```			
+					
+					
+
 ##How to get Categories from Woocommerce
 ```html
 			<?php
