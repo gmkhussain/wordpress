@@ -1,0 +1,59 @@
+@font-face {
+	font-family: 'DIN Mittelschrift Std';
+	src: url('../ttf/DINMittelschriftStd.eot');
+	src: url('../ttf/DINMittelschriftStd.eot?#iefix') format('embedded-opentype'),
+		url('../ttf/DINMittelschriftStd.woff') format('woff'),
+		url('../ttf/DINMittelschriftStd.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DIN Engschrift Std';
+	src: url('../ttf/DINEngschriftStd.eot');
+	src: url('../ttf/DINEngschriftStd.eot?#iefix') format('embedded-opentype'),
+		url('../ttf/DINEngschriftStd.woff') format('woff'),
+		url('../ttf/DINEngschriftStd.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DIN';
+	src: url('../ttf/DIN-Bold.eot');
+	src: url('../ttf/DIN-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../ttf/DIN-Bold.woff') format('woff'),
+		url('../ttf/DIN-Bold.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DIN';
+	src: url('../ttf/DIN-Black.eot');
+	src: url('../ttf/DIN-Black.eot?#iefix') format('embedded-opentype'),
+		url('../ttf/DIN-Black.woff') format('woff'),
+		url('../ttf/DIN-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DIN 30640 Std';
+	src: url('../ttf/DINNeuzeitGroteskStd-Light.eot');
+	src: url('../ttf/DINNeuzeitGroteskStd-Light.eot?#iefix') format('embedded-opentype'),
+		url('../ttf/DINNeuzeitGroteskStd-Light.woff') format('woff'),
+		url('../ttf/DINNeuzeitGroteskStd-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DIN 30640 Std';
+	src: url('../ttf/DINNeuzeitGroteskStd-BdCond.eot');
+	src: url('../ttf/DINNeuzeitGroteskStd-BdCond.eot?#iefix') format('embedded-opentype'),
+		url('../ttf/DINNeuzeitGroteskStd-BdCond.woff') format('woff'),
+		url('../ttf/DINNeuzeitGroteskStd-BdCond.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}

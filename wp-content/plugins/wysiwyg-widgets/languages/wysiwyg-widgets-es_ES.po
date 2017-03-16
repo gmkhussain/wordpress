@@ -1,0 +1,126 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WYSIWYG Widgets\n"
+"POT-Creation-Date: 2013-11-05 11:43+0100\n"
+"PO-Revision-Date: 2013-11-05 13:46+0100\n"
+"Last-Translator: jelena kovacevic <jecajeca260@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../.\n"
+
+#: .././includes/WYSIWYG_Widgets.php:22 .././includes/WYSIWYG_Widgets.php:33
+msgid "Widget Blocks"
+msgstr "Widget Blocks"
+
+#: .././includes/WYSIWYG_Widgets.php:23
+msgid "Widget Block"
+msgstr "Widget Block"
+
+#: .././includes/WYSIWYG_Widgets.php:24 .././includes/WYSIWYG_Widgets.php:27
+msgid "New Widget Block"
+msgstr "Nuevo Widget Block"
+
+#: .././includes/WYSIWYG_Widgets.php:25
+msgid "Add New Widget Block"
+msgstr "Adicionar Nuevo Widget Block"
+
+#: .././includes/WYSIWYG_Widgets.php:26
+msgid "Edit Widget Block"
+msgstr "Editar Nuevo Widget Block"
+
+#: .././includes/WYSIWYG_Widgets.php:28
+msgid "All Widget Blocks"
+msgstr "Todos los Widget Blocks"
+
+#: .././includes/WYSIWYG_Widgets.php:29
+msgid "View Widget Block"
+msgstr "Ver Widget Block"
+
+#: .././includes/WYSIWYG_Widgets.php:30
+msgid "Search Widget Blocks"
+msgstr "Buscar Widget Blocks"
+
+#: .././includes/WYSIWYG_Widgets.php:31
+#: .././includes/WYSIWYG_Widgets_Widget.php:109
+msgid "No widget blocks found"
+msgstr "No se encontraron bloques de widget"
+
+#: .././includes/WYSIWYG_Widgets.php:32
+msgid "No widget blocks found in Trash"
+msgstr "No se encontraron bloques de Widget en la Papelera de Reciclaje"
+
+#: .././includes/WYSIWYG_Widgets.php:55
+msgid "More.."
+msgstr "Más..."
+
+#: .././includes/WYSIWYG_Widgets.php:103
+msgid "And now?"
+msgstr "¿Y ahora?"
+
+#: .././includes/WYSIWYG_Widgets.php:104
+#, php-format
+msgid ""
+"Show this widget block by going to your %swidgets page%s and then dragging "
+"the WYSIWYG Widget to one of your widget areas."
+msgstr ""
+"Mostrar este bloque de widget yendo a su %spágina de widgets%s  y luego "
+"arrastrando el Widget WYSIWYG a una de las áreas de widget."
+
+#: .././includes/WYSIWYG_Widgets.php:111
+msgid "Show your appreciation"
+msgstr "Muestre su apreciación"
+
+#: .././includes/WYSIWYG_Widgets.php:113
+msgid "Leave a &#9733;&#9733;&#9733;&#9733;&#9733; review on WordPress.org"
+msgstr "Deje una &#9733;&#9733;&#9733;&#9733;&#9733; reseña en WordPress.org"
+
+#: .././includes/WYSIWYG_Widgets.php:114
+msgid "Tweet about WYSIWYG Widgets"
+msgstr "Haga un Tweet sobre los Widgets WYSIWYG "
+
+#: .././includes/WYSIWYG_Widgets.php:115
+msgid "Vote \"works\" on the WordPress.org plugin page"
+msgstr "Vote  \"funciona\" en la página del plugin en WordPress.org"
+
+#: .././includes/WYSIWYG_Widgets.php:119
+msgid "Other useful plugins"
+msgstr "Otros plugins útiles"
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:9
+msgid "Displays one of your Widget Blocks."
+msgstr "Muestra uno de sus Widget Blocks."
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:56
+msgid "Please select a Widget Block to show in this area."
+msgstr "Por favor seleccione un Widget Block para mostrar en esta área."
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:58
+#, php-format
+msgid ""
+"No widget block found with ID %d, please select an existing Widget Block in "
+"the widget settings."
+msgstr ""
+"No se encontró el bloque de widget con ID %d, por favor seleccione un Widget "
+"Block existente en la configuración del widget."
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:107
+msgid "Widget Block to show:"
+msgstr "Widget Block a mostrar:"
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:109
+msgid "Select a widget block"
+msgstr "Seleccione un bloque de widget"
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:117
+msgid "Show title?"
+msgstr "¿Mostrar título?"
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:120
+#, php-format
+msgid "Manage your widget blocks %shere%s"
+msgstr "Gestione sus bloques de widget %saquí%s"

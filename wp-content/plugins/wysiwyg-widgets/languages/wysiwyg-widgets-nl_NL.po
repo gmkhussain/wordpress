@@ -1,0 +1,144 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WYSIWYG Widgets\n"
+"POT-Creation-Date: 2013-11-05 11:41+0100\n"
+"PO-Revision-Date: 2013-11-05 11:42+0100\n"
+"Last-Translator: Danny van Kooten <hi@dannyvankooten.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../.\n"
+
+#: .././includes/WYSIWYG_Widgets.php:22 .././includes/WYSIWYG_Widgets.php:33
+msgid "Widget Blocks"
+msgstr "Widget Blokken"
+
+#: .././includes/WYSIWYG_Widgets.php:23
+msgid "Widget Block"
+msgstr "Widget Blok"
+
+#: .././includes/WYSIWYG_Widgets.php:24 .././includes/WYSIWYG_Widgets.php:27
+msgid "New Widget Block"
+msgstr "Nieuw Widget Blok"
+
+#: .././includes/WYSIWYG_Widgets.php:25
+msgid "Add New Widget Block"
+msgstr "Nieuw Widget Blok Toevoegen"
+
+#: .././includes/WYSIWYG_Widgets.php:26
+msgid "Edit Widget Block"
+msgstr "Wijzig Widget Blok"
+
+#: .././includes/WYSIWYG_Widgets.php:28
+msgid "All Widget Blocks"
+msgstr "Alle Widget Blokken"
+
+#: .././includes/WYSIWYG_Widgets.php:29
+msgid "View Widget Block"
+msgstr "Bekijk Widget Blok"
+
+#: .././includes/WYSIWYG_Widgets.php:30
+msgid "Search Widget Blocks"
+msgstr "Doorzoek Widget Blokken"
+
+#: .././includes/WYSIWYG_Widgets.php:31
+#: .././includes/WYSIWYG_Widgets_Widget.php:109
+msgid "No widget blocks found"
+msgstr "Geen widget blokken gevonden"
+
+#: .././includes/WYSIWYG_Widgets.php:32
+msgid "No widget blocks found in Trash"
+msgstr "Geen widget blokken gevonden in de prullenbak"
+
+#: .././includes/WYSIWYG_Widgets.php:55
+msgid "More.."
+msgstr "Meer.."
+
+#: .././includes/WYSIWYG_Widgets.php:103
+msgid "And now?"
+msgstr "En nu?"
+
+#: .././includes/WYSIWYG_Widgets.php:104
+#, php-format
+msgid ""
+"Show this widget block by going to your %swidgets page%s and then dragging "
+"the WYSIWYG Widget to one of your widget areas."
+msgstr ""
+"Toon dit widget blok door naar je %swidgets pagina%s te gaan en de WYSIWYG "
+"Widget naar een van je widget gebieden te slepen."
+
+#: .././includes/WYSIWYG_Widgets.php:107
+#, fuzzy
+msgid "Donate a token of your appreciation"
+msgstr "Toon je waardering"
+
+#: .././includes/WYSIWYG_Widgets.php:108
+#, php-format
+msgid ""
+"If you like this plugin, consider %sdonating $10, $20 or $50%s as a token of "
+"your appreciation."
+msgstr ""
+
+#: .././includes/WYSIWYG_Widgets.php:111
+msgid "Show your appreciation"
+msgstr "Toon je waardering"
+
+#: .././includes/WYSIWYG_Widgets.php:113
+msgid "Leave a &#9733;&#9733;&#9733;&#9733;&#9733; review on WordPress.org"
+msgstr "Geef een &#9733;&#9733;&#9733;&#9733;&#9733; review op WordPress.org"
+
+#: .././includes/WYSIWYG_Widgets.php:114
+msgid "Tweet about WYSIWYG Widgets"
+msgstr "Tweet over WYSIWYG Widgets"
+
+#: .././includes/WYSIWYG_Widgets.php:115
+msgid "Vote \"works\" on the WordPress.org plugin page"
+msgstr "Stem \"works\" op de WordPress.org plugin pagina"
+
+#: .././includes/WYSIWYG_Widgets.php:119
+msgid "Other useful plugins"
+msgstr "Andere handige plugins"
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:9
+msgid "Displays one of your Widget Blocks."
+msgstr "Toont een van je Widget Blokken."
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:56
+msgid "Please select a Widget Block to show in this area."
+msgstr "Selecteer een Widget Blok om in dit widget gebied te tonen."
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:58
+#, php-format
+msgid ""
+"No widget block found with ID %d, please select an existing Widget Block in "
+"the widget settings."
+msgstr ""
+"Geen widget blok gevonden met Id %d, selecteer een bestaand Widget Blok in "
+"de widget instellingen."
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:107
+msgid "Widget Block to show:"
+msgstr "Widget Blok om te tonen:"
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:109
+msgid "Select a widget block"
+msgstr "Selecteer een widget blok"
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:117
+msgid "Show title?"
+msgstr "Toon titel?"
+
+#: .././includes/WYSIWYG_Widgets_Widget.php:120
+#, php-format
+msgid "Manage your widget blocks %shere%s"
+msgstr "Beheer je Widget Blokken %shier%s"
+
+#~ msgid "New Block"
+#~ msgstr "Nieuw Blok"
+
+#~ msgid "No widget blocks found."
+#~ msgstr "Geen widget blokken gevonden."
