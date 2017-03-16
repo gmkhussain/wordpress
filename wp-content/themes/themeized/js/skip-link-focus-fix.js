@@ -5,21 +5,31 @@
  * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
  */
 
-( function() {
-	var ua = navigator.userAgent.toLowerCase();
+ ( function() {
+	var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
+		isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
+		isIE     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
 
-	if ( ( ua.indexOf( 'webkit' ) > -1 || ua.indexOf( 'opera' ) > -1 || ua.indexOf( 'msie' ) > -1 ) &&
-		document.getElementById && window.addEventListener ) {
-
+	if ( ( isWebkit || isOpera || isIE ) && document.getElementById && window.addEventListener ) {
 		window.addEventListener( 'hashchange', function() {
-			var element = document.getElementById( location.hash.substring( 1 ) );
+			var id = location.hash.substring( 1 ),
+				element;
+
+			if ( ! ( /^[A-z0-9_-]+$/.test( id ) ) ) {
+				return;
+			}
+
+			element = document.getElementById( id );
 
 			if ( element ) {
-				if ( ! /^(?:a|select|input|button|textarea)$/i.test( element.nodeName ) ) {
+				if ( ! ( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
 					element.tabIndex = -1;
 				}
 
 				element.focus();
+
+				// Repositions the window on jump-to-anchor to account for admin bar and border height.
+				window.scrollBy( 0, -53 );
 			}
 		}, false );
 	}

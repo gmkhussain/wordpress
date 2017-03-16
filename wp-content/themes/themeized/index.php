@@ -5,13 +5,13 @@
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
- * e.g., it puts together the home page when no home.php file exists.
+ * E.g., it puts together the home page when no home.php file exists.
  *
- * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
+ * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
+ * @subpackage Twenty_Sixteen
+ * @since Twenty Sixteen 1.0
  */
 
 get_header(); ?>
@@ -36,21 +36,21 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'content', get_post_format() );
+				get_template_part( 'template-parts/content', get_post_format() );
 
 			// End the loop.
 			endwhile;
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
-				'next_text'          => __( 'Next page', 'twentyfifteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
+				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
+				'next_text'          => __( 'Next page', 'twentysixteen' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
 
 		// If no content, include the "No posts found" template.
 		else :
-			get_template_part( 'content', 'none' );
+			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>
@@ -58,4 +58,5 @@ get_header(); ?>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
