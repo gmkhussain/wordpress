@@ -47,8 +47,20 @@
 
 </section>
 
+	<!--Bootstrap-->
+    <script src="<?php echo get_stylesheet_directory_uri();?>/js/bootstrap.min.js"></script>
+	<!--./Bootstrap-->
+	
+	<!--Major Scripts-->
+	<script src="js/viewportchecker.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri();?>/<?php echo get_stylesheet_directory_uri();?>/js/kodeized.js"></script>
+	<!--./Major Scripts-->
+
+	
 	
 	<?php wp_footer(); ?>
+	
+	
 			
 	   </body>
 </html>
