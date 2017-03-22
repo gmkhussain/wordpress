@@ -1,66 +1,55 @@
+
+			
 	<footer>
-		<section class="ftr">
+		<section class="ftr-area" id="footer">
 			<div class="container">
-				<div class="ftr-box col-sm-3 ftr-logo">
-					<h4>Footer Logo</h4>
-					
-					<?php $post = get_post(31); setup_postdata($post); ?>
-					
-					<div class="ftr__logo"><?php the_post_thumbnail(); ?></div>
-					
+			
+                <div class="footer-box col-sm-4 col-sm-offset-1">
+					<?php dynamic_sidebar( 'home__contactform' ); ?>	
+                </div>
+				
+                <div class="footer-box col-sm-4 col-sm-offset-2 footer-right">
+					<?php dynamic_sidebar( 'footer__contactinfo' ); ?>	
 				</div>
-				<div class="ftr-box col-sm-6 ftr-links list-col-2 clrlist listview">
-					<h4>Useful links</h4>
+				
+				<div class="clearfix"></div>
+                
+				<div class="follow-area clrlist text-center">
+						    
+					<?php dynamic_sidebar( 'footer__followme' ); ?>
 					
-					<?php
-						$defaults = array(
-							'theme_location'  => '',
-							'menu'            => 'main_menu',
-							'container'       => '',
-							'container_class' => '',
-							'container_id'    => 'bs-navbar-ftr',
-							'menu_class'      => 'navbar-ftr',
-							'menu_id'         => '',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-							'before'          => '',
-							'after'           => '',
-							'link_before'     => '',
-							'link_after'      => '',
-							'items_wrap'      => '<ul id="%1$s" class="navbar-ftr">%3$s</ul>',
-							'depth'           => 0,
-							'walker'          => ''
-						);
-						wp_nav_menu( $defaults );
-						?>
-						
-				</div>
-				<div class="ftr-box col-sm-3 social-area clrlist">
-					<h4>Connect with Us</h4>
-					<?php dynamic_sidebar( 'social_icons' ); ?>				
-				</div>				
+				<div class="footer-logo"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo.png" alt=""></div>	  							
+                </div>  
+                        					
 			</div>
 		</section>
+		
+		<section class="copyright-area">
+		<div class="container">
+		    <div class="copyright-cont text-center">
+			    <?php dynamic_sidebar( 'bottom__copyright' ); ?>
+				
+			</div>   
+		</div>
+		</section>
+
+		
 	</footer>
 	
+			<a href="" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
 	
-
-</section>
-
+</main>
+    
 	<!--Bootstrap-->
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/bootstrap.min.js"></script>
 	<!--./Bootstrap-->
 	
 	<!--Major Scripts-->
-	<script src="js/viewportchecker.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri();?>/<?php echo get_stylesheet_directory_uri();?>/js/kodeized.js"></script>
+	<script src="<?php echo get_stylesheet_directory_uri();?>/js/viewportchecker.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri();?>/js/kodeized.js"></script>
 	<!--./Major Scripts-->
 
-	
-	
 	<?php wp_footer(); ?>
 	
-	
-			
-	   </body>
+		</body>
 </html>
