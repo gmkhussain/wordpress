@@ -2,10 +2,36 @@
 			
 	<footer>
 		<section class="ftr-area" id="footer">
+		
 			<div class="container">
 			
                 <div class="footer-box col-sm-4 col-sm-offset-1">
 					<?php dynamic_sidebar( 'home__contactform' ); ?>	
+					
+					<hr/>
+					 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <?php						
+					$defaults = array(
+					'theme_location'  => '',								
+					'menu'            => 'main_menu',								
+					'container'       => '',								
+					'container_class' => '',								
+					'container_id'    => 'bs-example-navbar-collapse-1',								
+					'menu_class'      => 'nav navbar-nav main-nav  navbar-right',								
+					'menu_id'         => '',								
+					'echo'            => true,								
+					'fallback_cb'     => 'wp_page_menu',								
+					'before'          => '',								
+					'after'           => '',								
+					'link_before'     => '',								
+					'link_after'      => '',								
+					'items_wrap'      => '<ul id="%1$s" class="nav navbar-nav">%3$s</ul>',								
+					'depth'           => 0,								
+					'walker'          => ''							
+					);						
+					wp_nav_menu( $defaults );					
+					?>
+                  </div>
                 </div>
 				
                 <div class="footer-box col-sm-4 col-sm-offset-2 footer-right">

@@ -3,7 +3,6 @@
 <?php get_header(); ?>
 
 
-
 <section class="slider-area">
   <div class="container">
 
@@ -57,6 +56,15 @@
 
 
 		
-	
+	<?php
+	$args = array( 'numberposts' => '5' );
+	$recent_posts = wp_get_recent_posts( $args );
+	foreach( $recent_posts as $recent ){
+		echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+		 echo  $recent["post_content"];
+	}
+	wp_reset_query();
+?>
+
 
 <?php get_footer(); ?>

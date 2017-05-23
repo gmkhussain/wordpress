@@ -45,8 +45,8 @@ function add_category_to_single($classes, $class) {
 }
 ```
 
-##Change site URL and WordPress URL in Localhost/Live Site
-###NOTE: 
+## Change site URL and WordPress URL in Localhost/Live Site
+### NOTE: 
 Steps  | Actions
 ------------- | -------------
 1. | Goto phpMyAdmin
@@ -80,12 +80,12 @@ SET option_value = REPLACE(option_value,'http://localhost/projects/_wpbasic','ht
 
 
 
-##Admin info
+## Admin info
 User: admin
 Password: admin123
 
 
-##ContactForm7 HTML with Bootstrap classes
+## ContactForm7 HTML with Bootstrap classes
 ```html
 <div class="form-group col-sm-4 pad-l0">[text* first-name class:form-control placeholder "Name" ]</div>
 <div class="form-group col-sm-4 pad-r0">[email* your-email class:form-control placeholder "Email"]</div>
@@ -96,7 +96,7 @@ Password: admin123
 
 
 
-##Remove the width and height attributes from WP image *Past in 'functions.php'
+## Remove the width and height attributes from WP image *Past in 'functions.php'
 ```html
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
@@ -108,7 +108,7 @@ function remove_width_attribute( $html ) {
 ```
 
 
-##Posts_per_page with no limit
+## Posts_per_page with no limit
 ```html
 $args = array(
 'post_type'      => 'post',
@@ -116,7 +116,7 @@ $args = array(
 );
 ```
 
-##Remove All shortcode tags from content.
+## Remove All shortcode tags from content.
 ```html
 <?php strip_shortcodes( get_the_content() ); ?>
 ```
@@ -128,7 +128,7 @@ $args = array(
 ```
 
 
-##Contact form 7 Redirecting to Another URL After submissions
+## Contact form 7 Redirecting to Another URL After submissions
 contact form 7 > 'Additional Settings'
 just add this code.
 ```html
@@ -136,7 +136,7 @@ on_sent_ok: "location = 'http://mydomain.com/thank-you/';"
 ```
 
 <p id="pwd4cf7"></p>
-###Password Fields for ContactForm7
+### Password Fields for ContactForm7
 ```html
 //HTML code
 <input type="text" name="your-password" class="password"  value="daddd">
@@ -153,13 +153,13 @@ on_sent_ok: "location = 'http://mydomain.com/thank-you/';"
 jQuery("[name*='password']").attr("type", "password");
 ```
 
-##Admin Styling
+## Admin Styling
 ```html
 //add this code in wp-admin/admin-header.php
 <?php wp_enqueue_style( 'wordpress-style', get_stylesheet_directory_uri() . '/wordpress-style.css' ); ?>
 ```
 
-##WooCommerce thumbnails images display in main image on mouse click
+## WooCommerce thumbnails images display in main image on mouse click
 ```html
 	jQuery( ".thumbnails a" ).click(function() {
 		imgUrl = jQuery(this).attr('data-href');
@@ -168,12 +168,12 @@ jQuery("[name*='password']").attr("type", "password");
 ```
 
 
-##Fixing Images and Broken Links by updating Paths in WordPress by SQL query
+## Fixing Images and Broken Links by updating Paths in WordPress by SQL query
 ```html
 UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/projects/wordpress/myproject_wp/', 'http://mydomain.com/projects/myproject_wp/');
 ```
 
-##Pagination for Custom Post Type
+## Pagination for Custom Post Type
 ```html
 			the_posts_pagination( array(
 				'mid_size'  => 2,
@@ -183,7 +183,7 @@ UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/proje
 ```			
 		
 		
-##Custom Post Type Category Link
+## Custom Post Type Category Link
 ```html
 <?php
 	query_posts( array( 'post_type' => 'myblogs', 'order' => 'ASC', 'myblogs_categories' => 'articles' ) );
@@ -205,7 +205,7 @@ UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/proje
 
 
 
-##PHP Session for counting visits
+## PHP Session for counting visits
 ```html
 <?php
 session_start();
@@ -223,7 +223,7 @@ if ($_SESSION['views'] == 1) {
 ```
 
 
-##Checking User login status
+## Checking User login status
 ```html
 <?php
 $current_user = wp_get_current_user();
@@ -235,7 +235,7 @@ if ( 0 == $current_user->ID ) {
 ?>
 ```
 
-##Post thumbnail url
+## Post thumbnail url
 ```html
 <?php echo the_post_thumbnail_url(full);?>
 
@@ -243,16 +243,20 @@ Example: <section class="page-bnr-area bg-cvr" style="background-image:url(<?php
 ```
 
 
-##Woocommerce shortcode for recent products 
+## Woocommerce shortcode for recent products 
 
 ```html
 [recent_products per_page="12" columns="5"]
 ```
 
 
+## How to edit Woocommerce fileds 
+```html
+class-wc-checkout.php
+```
 
 
-##Woocommerce Cart Item dropdown
+## Woocommerce Cart Item dropdown
 			```html		 
 					<li class="dropdown cart-menu"><a href="<?php echo wc_get_cart_url(); ?>"><i class="icon topicon2"><img src="<?php echo get_stylesheet_directory_uri();?>/images/cart-icon.png"></i></a> 
 					
@@ -308,7 +312,7 @@ Example: <section class="page-bnr-area bg-cvr" style="background-image:url(<?php
 					
 					
 
-##How to get Categories from Woocommerce
+## How to get Categories from Woocommerce
 ```html
 			<?php
 
