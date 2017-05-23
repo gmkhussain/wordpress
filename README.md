@@ -310,7 +310,10 @@ class-wc-checkout.php
 					</li>
 ```			
 					
-					
+### How to Display Advanced Custom Fields Content
+```html
+<?php the_field('text_field'); ?>
+```
 
 ## How to get Categories from Woocommerce
 ```html
