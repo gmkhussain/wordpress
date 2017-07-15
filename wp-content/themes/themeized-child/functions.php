@@ -151,6 +151,17 @@ function the_breadcrumb() {
 
 
 	
-	
+add_filter('gettext', 'change_howdy', 10, 3); 
+function change_howdy($translations, $untranslated_text, $domain)
+{
+    if (!is_admin() || 'default' != $domain) {
+        return $translations;
+    }
+    if (false !== strpos($translations, 'Howdy')) {
+        $translations = str_replace('Howdy', 'Hello', $translations);
+    }
+    return $translations;
+}
+
 
 ?>
