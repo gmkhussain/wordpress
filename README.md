@@ -369,6 +369,52 @@ class-wc-checkout.php
 			?>
 ```
 
+
+
+
+
+
+
+
+## Overriding WooCommerce files with a Child Theme
+
+After you activate your child theme, visit your site's front page. Everything should look exactly the same. All you have done so far is basically made a pointer from the child to the parent theme.
+
+**Step 1:** Create woocommerce directory.
+
+Now in your child theme directory create a new folder named "woocommerce". This folder will be responsible for storing customized WooCommerce template files.
+
+You should now have: /wp-content/themes/twentytwelve-child/woocommerce/
+
+**Step 2:** Add files which you want to customize
+
+You can find a list of all WooCommerce template files here: /wp-content/plugins/woocommerce/templates/
+
+In this example, I want to customize this file: /wp-content/plugins/woocommerce/templates/single-product/add-to-cart/external.php
+
+So I need to create that directory path and add that file in my child folder so that I have this:
+
+/wp-content/themes/twentytwelve-child/woocommerce/single-product/add-to-cart/external.php
+
+**Step 3:** Modify the external.php file
+
+Now we are ready to make our file edits. Open /wp-content/themes/twentytwelve-child/woocommerce/single-product/add-to-cart/external.php in your file editor and change this line:
+
+```
+	<a href="<?php echo esc_url( $product_url ); ?>" rel="nofollow" class="single_add_to_cart_button button alt"><?php echo $button_text; ?></a>
+	```
+	
+To this:
+
+```
+	<a target="_blank" href="<?php echo esc_url( $product_url ); ?>" rel="nofollow" class="single_add_to_cart_button button alt"><?php echo $button_text; ?></a>
+	```
+	
+Save the file.
+
+Now your 'buy' buttons will open in a new window.
+
+
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>
