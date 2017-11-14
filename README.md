@@ -24,6 +24,13 @@ Additional file list:
 ### 10. Login into wp-admin with U: admin , P: admin123
 
 
+
+### Woocommerce add to cart button missing
+```
+This problem will solved it by simply filling out the needed information for the product (ID, SKU, Price, Weight, Dimensions)
+```
+
+
 ```html
 Working...
 ```
