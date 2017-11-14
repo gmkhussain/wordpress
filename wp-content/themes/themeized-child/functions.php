@@ -26,6 +26,11 @@ add_action( 'after_setup_theme', 'theme_prefix_setup' );
 
 
 
+add_action('admin_head', 'wordpress_custom_style');
+
+function wordpress_custom_style() {
+	wp_enqueue_style( 'wordpress_custom_style', get_stylesheet_directory_uri() . '/wordpress-style.css' );
+}
 
 
 
