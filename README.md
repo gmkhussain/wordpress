@@ -407,19 +407,29 @@ So I need to create that directory path and add that file in my child folder so 
 
 Now we are ready to make our file edits. Open /wp-content/themes/twentytwelve-child/woocommerce/single-product/add-to-cart/external.php in your file editor and change this line:
 
-```
+```html
 	<a href="<?php echo esc_url( $product_url ); ?>" rel="nofollow" class="single_add_to_cart_button button alt"><?php echo $button_text; ?></a>
-	```
+```
 	
 To this:
 
-```
+```html
 	<a target="_blank" href="<?php echo esc_url( $product_url ); ?>" rel="nofollow" class="single_add_to_cart_button button alt"><?php echo $button_text; ?></a>
-	```
+```
 	
 Save the file.
 
 Now your 'buy' buttons will open in a new window.
+
+<hr>
+
+### How to override WooCommerce template files ? ( Short Note )
+
+To override the shop page, 
+copy: wp-content/plugins/woocommerce/templates/archive-product.php 
+to wp-content/themes/your_theme_name/woocommerce/archive-product.php
+
+and then make the necessary changes to the template in your themes folder.
 
 
 <hr/>
