@@ -432,6 +432,19 @@ to wp-content/themes/your_theme_name/woocommerce/archive-product.php
 and then make the necessary changes to the template in your themes folder.
 
 
+### How to get WooCommerce product author's name
+<b>Note:</b> 
+* Install 'Change Product Author for WooCommerce'
+* https://wordpress.org/plugins/woo-change-product-author/
+
+```javascript
+add_action( 'woocommerce_single_product_summary', 'woocommerce_product_author', 6);
+function woocommerce_product_author() {
+    the_author();
+}
+```
+
+
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>
