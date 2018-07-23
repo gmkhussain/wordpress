@@ -189,8 +189,11 @@ UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/proje
 			));
 ```			
 		
+
+
 		
 ## Custom Post Type Category Link
+<b>Issue:</b> diaply twice if assgined on 2 posts.
 ```html
 <?php
 	query_posts( array( 'post_type' => 'myblogs', 'order' => 'ASC', 'myblogs_categories' => 'articles' ) );
@@ -209,6 +212,34 @@ UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/proje
 
 <?php endwhile; endif; wp_reset_query(); ?>
 ```
+
+
+
+
+
+## Display categories of Custom Post Type?
+<b>Note:</b> All category will not display until assign to any post.
+```html
+<?php
+$taxonomy = 'my_products_categories';
+$terms = get_terms($taxonomy); // Get all terms of a taxonomy
+
+if ( $terms && !is_wp_error( $terms ) ) :
+?>
+    <ul>
+        <?php foreach ( $terms as $term ) { ?>
+            <li><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
+        <?php } ?>
+    </ul>
+<?php endif;?>
+```
+
+
+
+
+
+
+
 
 
 
