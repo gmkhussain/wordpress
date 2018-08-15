@@ -476,6 +476,30 @@ function woocommerce_product_author() {
 ```
 
 
+
+
+
+
+
+## WordPress asking localhost FTP credentials when install plugins on Ubuntu
+
+Open ```wp-config.php``` and add following code.
+
+```javascript
+define('FS_METHOD', 'direct');
+```
+
+
+
+
+
+
+
+
+
+
+
+
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>
