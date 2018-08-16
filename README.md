@@ -546,6 +546,20 @@ if( $field )
 
 
 
+## After 10 posts didn't display any post I am using WP_Query on custom post type
+
+```javascript
+// wp-admin/options-reading.php
+```
+
+<b>Note:</b> Try on wordpress <kbd>admin > settings > reading ></kbd> and upload the max of posts from 10 to any number.
+
+OR
+
+use <kbd>posts_per_page => -1</kbd> in WP Query parameter.
+
+
+
 
 
 
