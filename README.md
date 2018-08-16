@@ -492,6 +492,56 @@ define('FS_METHOD', 'direct');
 
 
 
+## How to get and display ACF ( Advanced Custom Fields ) field_key
+
+```javascript
+//Admin URL
+wp-admin/edit.php?post_type=acf&page=acf-export
+```
+
+
+```javascript
+//Display Values
+<?php 
+
+/*
+*  Get a field object and display it with it's value
+*/
+
+$field_name = "text_field";
+$field = get_field_object($field_name);
+
+echo $field['label'] . ': ' . $field['value'];
+
+/*
+*  Get a field object and display it with it's value (using the field key and the value fron another post)
+*/
+
+$field_key = "field_5039a99716d1d";
+$post_id = 123;
+$field = get_field_object($field_key, $post_id);
+
+echo $field['label'] . ': ' . $field['value'];
+
+/*
+*  Get a field object and create a select form element
+*/
+
+$field_key = "field_5039a99716d1d";
+$field = get_field_object($field_key);
+
+if( $field )
+{
+	echo '<select name="' . $field['key'] . '">';
+		foreach( $field['choices'] as $k => $v )
+		{
+			echo '<option value="' . $k . '">' . $v . '</option>';
+		}
+	echo '</select>';
+}
+
+?>
+```
 
 
 
