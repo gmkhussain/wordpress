@@ -588,6 +588,17 @@ NOTE: If still not works... turn the debugging on by opening ```wp-config.php```
 
 
 
+Another solution to resolve that problem just add the following code into your ```function.php``` or into your own plugin:
+```javascript
+function admin_bar(){
+
+  if(is_user_logged_in()){
+    add_filter( 'show_admin_bar', '__return_true' , 1000 );
+  }
+}
+add_action('init', 'admin_bar' );
+```
+
 
 
 
