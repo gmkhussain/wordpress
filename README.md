@@ -564,6 +564,43 @@ use <kbd>posts_per_page => -1</kbd> in WP Query parameter.
 
 
 
+
+
+
+
+
+
+
+
+
+<h1 align="center" id="Errors">
+	<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
+	<br/>
+	Issues / Errors / Mistakes
+</h1>
+
+
+## Missing Admin Bar Issue in WordPress
+
+Make sure <?php wp_footer(); ?> line added your theme in theme’s ```footer.php``` file just before the </body> tag.
+
+NOTE: If still not works... turn the debugging on by opening ```wp-config.php``` file and changing ```define('WP_DEBUG', false);``` to ```define('WP_DEBUG', true);```. WordPress will now show you warnings and notices that were previously hidden.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>
