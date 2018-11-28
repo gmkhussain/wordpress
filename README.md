@@ -564,6 +564,20 @@ use <kbd>posts_per_page => -1</kbd> in WP Query parameter.
 
 
 
+## Defer Parsing of JavaScript in WordPress
+
+This code add to the bottom of your theme’s functions.php
+
+```php
+function defer_parsing_of_js ( $url ) {
+    if ( FALSE === strpos( $url, '.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.js' ) ) return $url;
+    return '$url" defer';
+    }
+    add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+```
+
+
 
 
 
