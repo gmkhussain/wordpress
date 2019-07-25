@@ -1,27 +1,97 @@
-# WordPress Child Theme v0.1
-For [Backend](#Backed) 
+# WordPress Child Theme v1.5
 
 
-Additional file list:
-* [kscript.js](#kscript.js)
-* viewportchecker.js
-* css_browser_selector.js
-* swiper.jquery.min.js
 
-
-## Installing
-### 1. Download WordPress from wordpress.org
+## How to install WordPress
+### 1. Download WordPress from wordpress.org(wordpress.org)
 ### 2. Create <Project Folder> into htdocs on your XAMPP / Locahost
 ### 3. Exract WordPress.zip file
 ### 4. Create Database
-### 5. Run SQL code / import SQL file in PHPMyAdmin
-### 6. Change URLs in wp_options
-#### a) site url
-#### b) home
-### 7. Rename wp_content with "wp_content_old"
-### 8. Paste WP Package / Get Git Clone * Replace existing files.
-### 9. Config Database in wp_config.php
-### 10. Login into wp-admin with U: admin , P: admin123
+	<img src="https://www.studentstutorial.com/img/phpmyadmin2.PNG" alt="" />
+	
+### Visit url ```http://localhost/projects/wordpress/wordpress-project-folder```
+	It will redirect to http://localhost/projects/wordpress/p-admin/setup-config.php?step=0
+	
+### Click on ```Let's Go`` button
+### Enter information needed
+	<img src="https://wplang.org/wp-content/uploads/2014/06/Installation-Process.jpg" alt="" />
+
+
+
+
+
+
+
+
+
+
+
+## How to Create Child Theme
+
+### Click the create new folder, enter your child theme’s name and click Create.
+For example folder name: ```twentynineteen-child```
+
+
+
+### Create style.css with following code.
+
+```css
+/*
+Theme Name: Twenty Nineteen Child
+Theme URL: http://domain.com
+Description: Twenty Nineteen Child Theme
+Author: Amoos John Doe
+Author URL: http://domain.com
+Template: twentynineteen
+Version: 1.0.0
+Text Domain: twentynineteen-child
+*/
+```
+
+
+### Create a blank functions.php file in the same folder
+NOTE: but do not copy/paste the code from the parent theme’s file.
+
+
+### From the WordPress admin area, navigate to Appearance -> Themes to see your newly created child theme and click Activate
+
+
+
+### Open functions.php and add CSS JS
+
+File: functions.php
+```php
+<?php
+/**
+ * Proper way to enqueue scripts and styles
+ */
+function wpdocs_theme_name_scripts() {
+	
+	wp_enqueue_style( 'main', get_stylesheet_directory_uri().'/src/css/main.css' );
+    wp_enqueue_script( 'script-name', get_stylesheet_directory_uri() . '/src/js/main.js', array(), '1.0.0', true );
+	/* true = it will add into footer */
+	/* false = it will add into header */
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+?>
+```
+
+
+```wp_enqueue_script( 'script-name', get_stylesheet_directory_uri() . '/src/js/main.js', array(), '1.0.0', true );```
+
+NOTE: Last parameter value if set as ```true``` it will add into footer, OR its set as ```false``` = it will add into header.
+
+
+
+
+
+
+	
+	
+	
+
+
+
 
 
 
