@@ -690,6 +690,28 @@ add_action('init', 'admin_bar' );
 
 
 
+## How to fetch posts from post type using WP REST API
+
+Update your wordpress version incase not updated. This code for v2 of the REST API plugin
+
+Add the following code to create a rest endpoint in the functions.php file of your theme:
+
+```php
+add_action( 'init', 'add_myCustomPostType_endpoint');
+function add_myCustomPostType_endpoint(){
+    global $wp_post_types;
+    $wp_post_types['my_custome_post_type']->show_in_rest = true;
+    $wp_post_types['my_custome_post_type']->rest_base = 'my_custome_post_type';
+    $wp_post_types['my_custome_post_type']->rest_controller_class = 'WP_REST_Posts_Controller';
+}
+```
+
+
+Now visit URL:
+http://localhost/projects/your-project-name/wp-json/wp/v2/my_custome_post_type
+
+
+
 
 
 
