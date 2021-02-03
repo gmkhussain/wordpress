@@ -650,9 +650,28 @@ function defer_parsing_of_js ( $url ) {
 
 
 
+## load script or style for specific page in wordpress
 
+```js
+<?php
 
+function pid() {
+  global $current_screen;
+  $type = $current_screen->post_type;
+    ?>
+    <script type="text/javascript">
+        var page_id = '<?php global $post; echo $post->ID ?>';
+            console.log(page_id);
+    </script>
+    <?php
+    
+    if ( is_page(21880) ) { // find-certified-providers
+        wp_enqueue_script('new-page-js', get_template_directory_uri() . '/js/new-page.js', array( 'jquery' ),'1.1' , true );
+    }
+} 
+add_action('wp_head','pid');
 
+```
 
 
 
@@ -717,9 +736,3 @@ http://localhost/projects/your-project-name/wp-json/wp/v2/my_custome_post_type
 
 
 
-
-<hr/>
-<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
-<br/>
-[<img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" width="auto" height="32" /> Coded by @GMKHussain](http://twitter.com/gmkhussain)
-<hr/>
