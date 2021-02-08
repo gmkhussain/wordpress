@@ -697,8 +697,8 @@ Creating custom hook in page.php (or anywhere you may need a hook) locate:
 Hook add into functions.php
 
 ```js
-function body_begin() {
-  do_action('body_begin');
+function body_main_begin() {
+  do_action('body_main_begin');
 }
 ```
 
@@ -709,7 +709,7 @@ function my_function() {
   /* php code goes here */
   get_template_part('inc/breadcrumbs' );
 }
-add_action('body_begin', 'my_function');
+add_action('body_main_begin', 'my_function');
 ```
 
 
