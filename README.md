@@ -724,6 +724,25 @@ add_action('body_main_begin', 'my_function');
 
 
 
+## How to check current is page is product category or single product page
+
+```js
+ <?php 
+    if ( is_product() || is_product_category() ) {
+        // SHOP
+        woocommerce_breadcrumb();
+    } else {
+       // Blog
+}
+```
+
+
+
+
+
+
+
+
 
 <h1 align="center" id="Errors">
 	<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
