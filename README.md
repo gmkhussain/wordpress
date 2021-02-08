@@ -676,6 +676,55 @@ add_action('wp_head','pid');
 
 
 
+
+
+
+
+
+
+
+## Custom Hook directly after specific ID or tag in WordPress
+
+Creating custom hook in page.php (or anywhere you may need a hook) locate:
+
+```html
+<body <?php body_class(); ?>>
+  <main id="main_content">
+    <?php body_main_begin(); ?>
+```
+
+
+Hook add into functions.php
+
+```js
+function body_begin() {
+  do_action('body_begin');
+}
+```
+
+Now you can use by add any actions you need in functions.php:
+
+```js
+function my_function() {
+  /* php code goes here */
+  get_template_part('inc/breadcrumbs' );
+}
+add_action('body_begin', 'my_function');
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1 align="center" id="Errors">
 	<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
 	<br/>
