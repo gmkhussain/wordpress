@@ -717,6 +717,17 @@ add_action('body_main_begin', 'my_function');
 
 
 
+## How to add a custom class on body tag in Wordpress
+
+We can use the body_class filter.
+```js
+function my_plugin_body_class($classes) {
+    $classes[] = 'foo';
+    return $classes;
+}
+
+add_filter('body_class', 'my_plugin_body_class');
+```
 
 
 
@@ -735,6 +746,15 @@ add_action('body_main_begin', 'my_function');
        // Blog
 }
 ```
+
+
+
+
+
+
+
+
+
 
 
 
