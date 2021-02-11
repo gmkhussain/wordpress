@@ -751,6 +751,16 @@ add_filter('body_class', 'my_plugin_body_class');
 
 
 
+## How to add content under “Place Order” Button on woocommerce checkout page ?
+
+```js
+ add_action( 'woocommerce_review_order_before_submit', 'custome_content_below_checkout_button' );
+    
+    function custome_content_below_checkout_button() {
+        echo '<p><small>Custom Content <a href="#link" target=_blank">Custom Link</a></small></p>';
+    }
+```
+
 
 
 
