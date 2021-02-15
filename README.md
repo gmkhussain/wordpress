@@ -60,7 +60,7 @@ NOTE: but do not copy/paste the code from the parent theme’s file.
 ### Open functions.php and add CSS JS
 
 File: functions.php
-```php
+```js
 <?php
 /**
  * Proper way to enqueue scripts and styles
@@ -107,7 +107,7 @@ Working...
 
 
 ### Add Post Categories to the Body Class in WordPress
-```html
+```js
 add_filter('body_class','add_category_to_single');
 function add_category_to_single($classes, $class) {
   if (is_single() ) {
@@ -174,7 +174,7 @@ Password: admin123
 
 
 ## Remove the width and height attributes from WP image *Past in 'functions.php'
-```html
+```js
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
  
@@ -186,7 +186,7 @@ function remove_width_attribute( $html ) {
 
 
 ## Posts_per_page with no limit
-```html
+```js
 $args = array(
 'post_type'      => 'post',
 'posts_per_page' => -1
@@ -194,13 +194,13 @@ $args = array(
 ```
 
 ## Remove All shortcode tags from content.
-```html
+```js
 <?php strip_shortcodes( get_the_content() ); ?>
 ```
 
 
 ##Truncated string with specified charters
-```html
+```js
 <?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?>
 ```
 
@@ -237,7 +237,7 @@ jQuery("[name*='password']").attr("type", "password");
 ```
 
 ## WooCommerce thumbnails images display in main image on mouse click
-```html
+```js
 	jQuery( ".thumbnails a" ).click(function() {
 		imgUrl = jQuery(this).attr('data-href');
 		imgBig = jQuery(".woocommerce-main-image img").attr('src', imgUrl);
@@ -251,12 +251,12 @@ UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/proje
 ```
 
 ## Pagination for Custom Post Type
-```html
-			the_posts_pagination( array(
-				'mid_size'  => 2,
-				'prev_text' => __( '< Prev', 'textdomain' ),
-				'next_text' => __( 'Next >', 'textdomain' ),
-			));
+```js
+	the_posts_pagination( array(
+		'mid_size'  => 2,
+		'prev_text' => __( '< Prev', 'textdomain' ),
+		'next_text' => __( 'Next >', 'textdomain' ),
+	));
 ```			
 		
 
@@ -264,7 +264,7 @@ UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/proje
 		
 ## Custom Post Type Category Link
 <b>Issue:</b> diaply twice if assgined on 2 posts.
-```html
+```js
 <?php
 	query_posts( array( 'post_type' => 'myblogs', 'order' => 'ASC', 'myblogs_categories' => 'articles' ) );
 	 /*the loop start here*/
@@ -289,7 +289,7 @@ UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost/proje
 
 ## Display categories of Custom Post Type?
 <b>Note:</b> All category will not display until assign to any post.
-```html
+```js
 <?php
 $taxonomy = 'my_products_categories';
 $terms = get_terms($taxonomy); // Get all terms of a taxonomy
@@ -314,25 +314,31 @@ if ( $terms && !is_wp_error( $terms ) ) :
 
 
 ## PHP Session for counting visits
-```html
+```js
 <?php
 session_start();
 
-if (!isset($_SESSION['views'])) { 
-    $_SESSION['views'] = 0;
-}
+	if (!isset($_SESSION['views'])) { 
+	    $_SESSION['views'] = 0;
+	}
 
-$_SESSION['views'] = $_SESSION['views']+1;
+	$_SESSION['views'] = $_SESSION['views']+1;
 
-if ($_SESSION['views'] == 1) {
-    /***DO SOMETHING***/
-}
+	if ($_SESSION['views'] == 1) {
+	    /***DO SOMETHING***/
+	}
 ?>
 ```
 
 
+
+
+
+
+
+
 ## Checking User login status
-```html
+```js
 <?php
 $current_user = wp_get_current_user();
 if ( 0 == $current_user->ID ) {
@@ -343,8 +349,15 @@ if ( 0 == $current_user->ID ) {
 ?>
 ```
 
+
+
+
+
+
+
+
 ## Post thumbnail url
-```html
+```js
 <?php echo the_post_thumbnail_url(full);?>
 
 Example: <section class="page-bnr-area bg-cvr" style="background-image:url(<?php echo the_post_thumbnail_url(full);?>)";>
@@ -353,38 +366,34 @@ Example: <section class="page-bnr-area bg-cvr" style="background-image:url(<?php
 
 ## Woocommerce shortcode for recent products 
 
-```html
+```js
 [recent_products per_page="12" columns="5"]
 ```
 
 
 ## How to edit Woocommerce fileds 
-```html
+```js
 class-wc-checkout.php
 ```
 
 
 ## Woocommerce Cart Item dropdown
-			```html		 
-					<li class="dropdown cart-menu"><a href="<?php echo wc_get_cart_url(); ?>"><i class="icon topicon2"><img src="<?php echo get_stylesheet_directory_uri();?>/images/cart-icon.png"></i></a> 
-					
-										
-						<?php global $woocommerce; ?>
-						
-						<a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">Cart Items <span class="total">(<?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>)</span></a>
+```js		 
+	<li class="dropdown cart-menu"><a href="<?php echo wc_get_cart_url(); ?>"><i class="icon topicon2"><img src="<?php echo get_stylesheet_directory_uri();?>/images/cart-icon.png"></i></a> 
+		<?php global $woocommerce; ?>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">Cart Items <span class="total">(<?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>)</span></a>
 
+		 	<?php if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) : ?>
+			  <ul class="dropdown-menu">
 					  
-					  <?php if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) : ?>
-					  <ul class="dropdown-menu">
-					  
-										<?php $woocommerce->cart->cart_contents = array_reverse($woocommerce->cart->cart_contents); ?>
-										<?php foreach ( $woocommerce->cart->get_cart() as $cart_item_key => $values ) :
-											$_product = $values['data'];
-											if ( $_product->exists() && $values['quantity'] > 0 ) :
-												$product_quantity = esc_attr( $values['quantity'] );
-												$product_price = (( get_option('woocommerce_display_cart_prices_excluding_tax') == 'yes' ) ? $_product->get_price_excluding_tax() : $_product->get_price()) * $product_quantity;
-											?>
-											<li>
+				<?php $woocommerce->cart->cart_contents = array_reverse($woocommerce->cart->cart_contents); ?>
+				<?php foreach ( $woocommerce->cart->get_cart() as $cart_item_key => $values ) :
+					$_product = $values['data'];
+					if ( $_product->exists() && $values['quantity'] > 0 ) :
+						$product_quantity = esc_attr( $values['quantity'] );
+						$product_price = (( get_option('woocommerce_display_cart_prices_excluding_tax') == 'yes' ) ? $_product->get_price_excluding_tax() : $_product->get_price()) * $product_quantity;
+					?>
+					<li>
 												<span class="shop-bag-thumb">
 													<a href="<?php echo esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $values['product_id'] ) ) ); ?>" class="clearfix">
 														<?php echo $_product->get_image('zoom-thumb'); ?>
@@ -403,78 +412,76 @@ class-wc-checkout.php
 												</span>
 												
 											</li>
-										<?php endif; endforeach; ?>
+				<?php endif; endforeach; ?>
 									
-									<div class="subtotal">
-										<span class="text">Subtotal</span><span class="total"><?php echo $woocommerce->cart->get_cart_total(); ?></span>
-									</div>
-									
-									<a href="<?php echo home_url( '/' ); ?>shopping-bag/" class="go-to-checkout">Checkout</a>
+				<div class="subtotal">
+					<span class="text">Subtotal</span><span class="total"><?php echo $woocommerce->cart->get_cart_total(); ?></span>
+				</div>
+
+				<a href="<?php echo home_url( '/' ); ?>shopping-bag/" class="go-to-checkout">Checkout</a>
 								
-								<?php endif; ?>			
-	
-					  </ul>
-			
-					</li>
+			<?php endif; ?>
+			  </ul>
+		</li>
 ```			
 					
 ### How to Display Advanced Custom Fields Content
-```html
+```js
 <?php the_field('text_field'); ?>
 ```
 
 ## How to get Categories from Woocommerce
-```html
-			<?php
+```js
+<?php
 
-						  $taxonomy     = 'product_cat';
-						  $orderby      = 'name';  
-						  $show_count   = 0;      // 1 for yes, 0 for no
-						  $pad_counts   = 0;      // 1 for yes, 0 for no
-						  $hierarchical = 1;      // 1 for yes, 0 for no  
-						  $title        = '';  
-						  $empty        = 0;
+	  $taxonomy     = 'product_cat';
+	  $orderby      = 'name';  
+	  $show_count   = 0;      // 1 for yes, 0 for no
+	  $pad_counts   = 0;      // 1 for yes, 0 for no
+	  $hierarchical = 1;      // 1 for yes, 0 for no  
+	  $title        = '';  
+	  $empty        = 0;
 
-						  $args = array(
-								 'taxonomy'     => $taxonomy,
-								 'orderby'      => $orderby,
-								 'show_count'   => $show_count,
-								 'pad_counts'   => $pad_counts,
-								 'hierarchical' => $hierarchical,
-								 'title_li'     => $title,
-								 'hide_empty'   => $empty
-						  );
-						 $all_categories = get_categories( $args );
-						 echo "<ul class='nav navbar-nav navbar-list'>";
-						 foreach ($all_categories as $cat) {
-							if($cat->category_parent == 0) {
-								$category_id = $cat->term_id;       
-								echo '<li><a href="'. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name .'</a></li>';
+	  $args = array(
+			 'taxonomy'     => $taxonomy,
+			 'orderby'      => $orderby,
+			 'show_count'   => $show_count,
+			 'pad_counts'   => $pad_counts,
+			 'hierarchical' => $hierarchical,
+			 'title_li'     => $title,
+			 'hide_empty'   => $empty
+	  );
+	 $all_categories = get_categories( $args );
+	 echo "<ul class='nav navbar-nav navbar-list'>";
+	 foreach ($all_categories as $cat) {
+		if($cat->category_parent == 0) {
+			$category_id = $cat->term_id;       
+			echo '<li><a href="'. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name .'</a></li>';
 
-								$args2 = array(
-										'taxonomy'     => $taxonomy,
-										'child_of'     => 0,
-										'parent'       => $category_id,
-										'orderby'      => $orderby,
-										'show_count'   => $show_count,
-										'pad_counts'   => $pad_counts,
-										'hierarchical' => $hierarchical,
-										'title_li'     => $title,
-										'hide_empty'   => $empty
-								);
-								$sub_cats = get_categories( $args2 );
-								
-									echo "<ul>";
-										if($sub_cats) {
-											foreach($sub_cats as $sub_category) {
-												echo '<li><a href="'. get_term_link($sub_category->slug, 'product_cat') .'">'. $sub_category->name .'</a></li>';
-											}   
-										}
-									echo "</ul>";
-							}       
-						}
+			$args2 = array(
+					'taxonomy'     => $taxonomy,
+					'child_of'     => 0,
+					'parent'       => $category_id,
+							'orderby'      => $orderby,
+							'show_count'   => $show_count,
+							'pad_counts'   => $pad_counts,
+							'hierarchical' => $hierarchical,
+							'title_li'     => $title,
+							'hide_empty'   => $empty
+					);
+					$sub_cats = get_categories( $args2 );
+
+						echo "<ul>";
+							if($sub_cats) {
+								foreach($sub_cats as $sub_category) {
+									echo '<li><a href="'. get_term_link($sub_category->slug, 'product_cat') .'">'. $sub_category->name .'</a></li>';
+								}   
+							}
 						echo "</ul>";
-			?>
+				}       
+			}
+	echo "</ul>";
+?>
 ```
 
 
@@ -638,7 +645,7 @@ use <kbd>posts_per_page => -1</kbd> in WP Query parameter.
 
 This code add to the bottom of your theme’s functions.php
 
-```php
+```js
 function defer_parsing_of_js ( $url ) {
     if ( FALSE === strpos( $url, '.js' ) ) return $url;
     if ( strpos( $url, 'jquery.js' ) ) return $url;
@@ -826,6 +833,62 @@ foreach($customer_orders as $order){
 }
 echo "</table>";
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## How display all page title.
+
+```js
+$args = array(
+    'sort_order' => 'asc',
+    'sort_column' => 'post_title',
+    'hierarchical' => 1,
+    'exclude' => '',
+    'include' => '',
+    'meta_key' => '',
+    'meta_value' => '',
+    'authors' => '',
+    'child_of' => 0,
+    'parent' => -1,
+    'exclude_tree' => '',
+    'number' => '',
+    'offset' => 0,
+    'post_type' => 'page',
+    'post_status' => 'publish',
+    array(
+      //'taxonomy' => '',
+      //'field'    => 'slug',
+      'tags'    => array( 'feat_service' ), // searches for EITHER tag
+    ),
+); 
+$pages = get_pages($args); 
+
+
+foreach ($pages as $page) {
+    $title = $page->post_title; 
+    echo $title. "<br />";
+}
+```
+
+
+
+
+
+
+
 
 
 
