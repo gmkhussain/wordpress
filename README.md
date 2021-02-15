@@ -769,6 +769,20 @@ add_filter('body_class', 'my_plugin_body_class');
 
 
 
+## Pretty-Printing JSON with PHP for debugging 
+```js
+$pretty_json = "<pre>".print_r(json_decode($json), true)."</pre>";
+
+echo $pretty_json;
+```
+
+
+
+
+
+
+
+
 
 
 
