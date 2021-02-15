@@ -787,6 +787,56 @@ echo $pretty_json;
 
 
 
+## Getting current customer orders detail
+```js
+$order_statuses = array('wc-completed');
+$customer_user_id = get_current_user_id(); // current user ID 
+
+// Getting current customer orders
+$customer_orders = wc_get_orders( 
+  array(
+    'meta_key' => '_customer_user',
+    'meta_value' => $customer_user_id,
+    'post_status' => $order_statuses,
+    'numberposts' => -1
+  ) 
+);
+
+echo "<table style='border: 1px solid #d00;'>";
+echo "<thead><th>id</th><th>name</th><th>phone</th><th>email</th><th>address</th><th>Title</th><th>Order Date</th></thead>";
+
+foreach($customer_orders as $order){
+     
+  //your logic
+    echo "<tr>";
+        echo "<td>" . $order->id . "</td>";
+        echo "<td>" . $order->get_billing_first_name() . " " . $order->get_billing_last_name()  . "</td>";
+        echo "<td>" . $order->get_billing_phone() . "</td>";
+        echo "<td>" . $order->get_billing_email() . "</td>";
+        echo "<td>" . $order->get_formatted_billing_address() . "</td>";
+        
+        foreach($order->get_items() as $item) {
+        
+            $product_name = $item['name'];
+            echo "<td>" . $product_name . "</td>";
+        }
+        echo "<td>" . $order->get_date_created() . "</td>";
+
+    echo "</tr>";  
+}
+echo "</table>";
+```
+
+
+
+
+
+
+
+
+
+
+
 
 <h1 align="center" id="Errors">
 	<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
