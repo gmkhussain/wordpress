@@ -199,7 +199,7 @@ $args = array(
 ```
 
 
-##Truncated string with specified charters
+## Truncated string with specified charters
 ```js
 <?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?>
 ```
@@ -654,6 +654,26 @@ function defer_parsing_of_js ( $url ) {
     add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 ```
 
+
+
+
+
+## Add inline javascript without dependency with conditionals
+```js
+	if ($rs["charji_email"] == $curr_user_email ) {
+		$match_status = "yes";
+		$cls = "<script> setTimeout(function(){ document.body.classList.add('membership--socialmedia') }, 2000); </script>";
+		$redirectStatus = 1;
+		break;
+    } else {
+        $cls = "<script> setTimeout(function(){ document.body.classList.add('membership--other') }, 2000); </script>";
+    }
+		
+	add_action( 'wp_head', 'wpse_add_inline_script' );
+	function wpse_add_inline_script() {
+		echo $cls;
+	}
+```
 
 
 
